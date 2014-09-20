@@ -11,7 +11,7 @@ import static org.springframework.http.HttpStatus.OK;
 
 public class LocationService {
 
-  public static final String LOCATION_API = "http://api.goeuro.com/api/v2/position/suggest/en/%s";
+  private static final String LOCATION_API = "http://api.goeuro.com/api/v2/position/suggest/en/%s";
   private JsonRestTemplate restTemplate;
 
   public LocationService() {
