@@ -4,9 +4,6 @@ import com.goeuro.model.Location;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestClientException;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-
 import static org.springframework.http.HttpStatus.OK;
 
 public class LocationService {
@@ -25,8 +22,7 @@ public class LocationService {
       if (response.getStatusCode().equals(OK)) {
         return response.getBody();
       }
-    }catch (RestClientException e){
-      e.printStackTrace(); //todo log error
+    }catch (RestClientException ignored){
     }
     return new Location[0];
   }
