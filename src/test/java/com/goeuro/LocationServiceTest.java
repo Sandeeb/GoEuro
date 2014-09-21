@@ -31,12 +31,4 @@ public class LocationServiceTest {
     result = locationService.search("asjkhasfoiw");
     assertThat(result.length, is(0));
   }
-
-  @Test
-  public void searchShouldUrlEncodeTheSearchString() throws Exception {
-    LocationService locationService = new LocationService();
-
-    Location[] result = locationService.search("sa/an");
-    assertThat(result.length, is(0));
-  }
 }
